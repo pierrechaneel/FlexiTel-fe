@@ -16,7 +16,7 @@ export function LoginForm({
   ...props
 }: React.ComponentProps<"div">) {
  
-  const [state, formAction, pending] = useActionState<LoginState, FormData>(
+ const [state, formAction, pending] = useActionState<LoginState, FormData>(
     loginAction,
     {}
   );
