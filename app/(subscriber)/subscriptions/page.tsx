@@ -14,7 +14,6 @@ export default async function SubscriptionsPage() {
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-bold">Mes abonnements</h1>
 
-        {/* bouton “Souscrire” */}
         <Button asChild>
           <Link href="/offers">
             <Plus className="h-4 w-4" />
