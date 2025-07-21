@@ -1,7 +1,7 @@
 "use server";
 
 import { redirect } from "next/navigation";
-import { login, logout, signup,  } from "./api";
+import { login, logout, signup, } from "./api";
 import { signupSchema } from "./schemas";
 import { getErrorMessage } from "@/common/util/errors";
 import { setAuthCookie } from "@/features/auth/helpers/cookies";
@@ -21,15 +21,15 @@ export type SignupState = {
 };
 
 export type LoginState = {
-  formError?: string;           
-  success?: boolean; 
+  formError?: string;
+  success?: boolean;
 };
 
 export default async function loginAction(
   _prev: LoginState,
   formData: FormData
 ): Promise<LoginState> {
-  
+
   const dto = Object.fromEntries(formData) as LoginDTO;
   const res = await login(dto);
   const json = await res.json();
@@ -51,7 +51,7 @@ export default async function loginAction(
     }
   }
 
-  
+
   return { formError: "Impossible de récupérer le jeton d’authentification" };
 }
 
@@ -59,7 +59,7 @@ export async function signupAction(
   _prev: SignupState,
   formData: FormData
 ): Promise<SignupState> {
-  
+
   const parsed = signupSchema.safeParse(Object.fromEntries(formData));
   if (!parsed.success) {
     const { fieldErrors } = parsed.error.flatten();
@@ -86,9 +86,9 @@ export async function signupAction(
 export async function logoutAction() {
   await logout()
 
-  
-  ;(await cookies()).delete(AUTHENTICATION_COOKIE)
 
-  
+    ; (await cookies()).delete(AUTHENTICATION_COOKIE)
+
+
   redirect("/login")
 }

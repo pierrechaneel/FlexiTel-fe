@@ -19,7 +19,7 @@ export async function signup(dto: SignupDTO) {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(dto),
-    credentials: "include",          
+    credentials: "include",
   });
 }
 
@@ -43,6 +43,6 @@ export async function fetchCurrentUser(token?: string) {
 export async function logout() {
   return fetch(`${API_URL}/auth/logout`, {
     method: "POST",
-    credentials: "include",   
+    credentials: "include",
   });
 }
