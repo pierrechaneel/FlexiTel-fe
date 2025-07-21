@@ -16,7 +16,6 @@ export default async function InvoicesPage({
   const page = Number(searchParams?.page) || 1
   const year = Number(searchParams?.year) || undefined
 
-  // 🟢 fallback [] correctement typé
   const invoices: InvoiceDto[] = await invoicesAction(page, 10, year)
     .catch((): InvoiceDto[] => [])
 

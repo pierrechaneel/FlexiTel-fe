@@ -45,8 +45,7 @@ export const USER_ROUTES: RouteItem[] = [
   { title: "Offres",          path: "/offers",        icon: Package },
   { title: "Portefeuille",    path: "/wallet",        icon: Wallet },
   { title: "Factures",        path: "/invoices",      icon: FileText },
-  { title: "N° surveillés",   path: "/monitoring",    icon: Eye },
-  { title: "Paramètres",      path: "/settings",      icon: Settings2 },
+  { title: "Paramètres",      path: "#",      icon: Settings2 },
 ]
 
 export const ADMIN_ROUTES: RouteItem[] = [
