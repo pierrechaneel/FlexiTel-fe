@@ -40,7 +40,7 @@ type RouteItem = {
 }
 
 export const USER_ROUTES: RouteItem[] = [
-  { title: "Mes abonnements", path: "/subscription",              icon: Layers },
+  { title: "Mes abonnements", path: "/subscriptions",              icon: Layers },
   { title: "Mes numéros",     path: "/my-numbers",    icon: Phone  },
   { title: "Offres",          path: "/offers",        icon: Package },
   { title: "Portefeuille",    path: "/wallet",        icon: Wallet },
