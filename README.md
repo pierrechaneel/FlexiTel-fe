@@ -4,6 +4,8 @@
 
 **Portail B2C – Gestion d’abonnements mobiles**
 
+demo : https://www.pierrechaneel.com/demo
+
 Ce projet est le fontend de notre plateforme web destinée aux clients finaux, leur permettant de gérer facilement leurs services mobiles :  
 - **Inscription et authentification** : création de compte, login/logout et gestion des rôles (`USER`, `ADMIN`).  
 - **Souscription et gestion d’offres** : parcours de souscription à des packs voix, data ou SMS, avec suivi du statut (`ACTIVE`, `EXPIRED`, `CANCELED`) et des quotas restants.  
