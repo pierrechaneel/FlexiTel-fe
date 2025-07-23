@@ -31,14 +31,14 @@ export default function SignupPage() {
     }, [state]);
 
     return (
-        <Card className="mx-auto max-w-[980px] overflow-hidden p-0">
-            <CardContent className="grid md:grid-cols-2 p-0">
+        <div className="min-h-screen flex items-center justify-center bg-muted">
+        <Card className="mx-auto max-w-[980px] overflow-hidden">
+            <CardContent className="grid md:grid-cols-2">
                 <div className="relative hidden md:block bg-muted">
                     <img
                         src="/login.png"
                         alt="Illustration signup"
-                        className="absolute inset-0 h-full w-full object-cover
-                       dark:brightness-[0.2] dark:grayscale"
+                        className="absolute inset-0 h-full w-full object-cover"
                     />
                 </div>
 
@@ -88,5 +88,6 @@ export default function SignupPage() {
                 </form>
             </CardContent>
         </Card>
+        </div>
     );
 }

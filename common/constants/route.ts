@@ -49,12 +49,12 @@ export const USER_ROUTES: RouteItem[] = [
 ]
 
 export const ADMIN_ROUTES: RouteItem[] = [
-  { title: "Utilisateurs",    path: "/admin/users",          icon: Users },
+  { title: "Utilisateurs",    path: "#",          icon: Users },
   { title: "Numéros",         path: "/admin/numbers",        icon: Phone },
-  { title: "Offres",          path: "/admin/offers",         icon: Package },
-  { title: "Abonnements",     path: "/admin/subscriptions",  icon: Layers },
-  { title: "Factures",        path: "/admin/invoices",       icon: FileText },
-  { title: "Paramètres",      path: "/admin/settings",       icon: Settings2 },
+  { title: "Offres",          path: "#",         icon: Package },
+  { title: "Abonnements",     path: "#",  icon: Layers },
+  { title: "Factures",        path: "#",       icon: FileText },
+  { title: "Paramètres",      path: "#",       icon: Settings2 },
 ]
 
 

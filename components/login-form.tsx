@@ -63,7 +63,6 @@ export function LoginForm({
               </span>
             </div>
             <div className="grid grid-cols-3 gap-4">
-              {/* vos boutons SSO */}
             </div>
             <p className="text-center text-sm">
               Pas encore un compte?{" "}
@@ -76,7 +75,7 @@ export function LoginForm({
             <img
               src="/login.png"
               alt="Illustration login"
-              className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
+              className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
         </CardContent>

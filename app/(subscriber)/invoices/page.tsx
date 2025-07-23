@@ -1,4 +1,3 @@
-/* app/(subscriber)/invoices/page.tsx */
 import InvoiceTable from "@/components/invoice-table"
 import YearFilter from "@/components/year-filter"
 import { invoicesAction } from "@/features/invoices/actions.server"

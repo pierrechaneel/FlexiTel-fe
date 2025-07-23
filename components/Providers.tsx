@@ -1,15 +1,12 @@
+// components/Providers.tsx
 "use client"
-
-import { useEffect, useState, type ReactNode } from "react"
-import { ThemeProvider } from "@/components/theme-provider"
-import { Toaster } from "react-hot-toast"
+import { ReactNode, useEffect, useState } from "react"
+import { ThemeProvider }                from "next-themes"
+import { Toaster }                      from "react-hot-toast"
 
 export function Providers({ children }: { children: ReactNode }) {
-
   const [mounted, setMounted] = useState(false)
-  useEffect(() => setMounted(true), [])
-
-  if (!mounted) return <>{children}</>
+  useEffect(() => { setMounted(true) }, [])
 
   return (
     <ThemeProvider
@@ -19,10 +16,12 @@ export function Providers({ children }: { children: ReactNode }) {
       disableTransitionOnChange
     >
       {children}
-      <Toaster
-        position="top-center"
-        toastOptions={{ className: "bg-card text-foreground" }}
-      />
+      {mounted && (
+        <Toaster
+          position="top-center"
+          toastOptions={{ className: "bg-card text-foreground" }}
+        />
+      )}
     </ThemeProvider>
   )
 }
