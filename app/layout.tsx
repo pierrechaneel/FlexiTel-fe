@@ -16,11 +16,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | MaxRH. La proximité est garantie grâce au digital.',
-    default: 'MaxRH. La proximité est garantie grâce au digital.',
+    template: '%s | Flexitel. La proximité est garantie grâce au digital.',
+    default: `Flexitel. Portail B2C de gestion d'abonnements mobiles .`,
   },
-  description: "A digital plateform for RH management and reporting",
-  applicationName: "MaxRH"
+  description: "A digital plateform for moblile subscriber management",
+  applicationName: "Flexitel"
 };
 
 export default function RootLayout({
