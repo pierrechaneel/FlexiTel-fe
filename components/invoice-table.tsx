@@ -29,11 +29,11 @@ function euros(val: string | number) {
   })
 }
 
-/* ---------- composant ---------- */
+
 export default function InvoiceTable({ data = [] }: { data?: InvoiceDto[] }) {
   const [selected, setSelected] = useState<InvoiceDto | null>(null)
 
-  /* gère { set: [...] } ou tableau direct */
+
   const toArray = (lines: any): any[] =>
     Array.isArray(lines) ? lines : Array.isArray(lines?.set) ? lines.set : []
 
@@ -65,7 +65,6 @@ export default function InvoiceTable({ data = [] }: { data?: InvoiceDto[] }) {
         </TableBody>
       </Table>
 
-      {/* modal détail */}
       <Dialog open={!!selected} onOpenChange={() => setSelected(null)}>
         <DialogContent>
           {selected && (

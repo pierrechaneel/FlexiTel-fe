@@ -1,33 +1,50 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Providers } from "@/components/Providers";
-import { getCurrentUserFromCookies } from "@/features/auth/helpers/auth.server";
-import { redirect } from "next/navigation";
+import { Toaster } from "react-hot-toast";
+import { ThemeProvider } from "next-themes";
 
-const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
-const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
-  title: "FlexiTel",
-  description: "Gestion d'abonnements mobiles",
+  title: {
+    template: '%s | MaxRH. La proximité est garantie grâce au digital.',
+    default: 'MaxRH. La proximité est garantie grâce au digital.',
+  },
+  description: "A digital plateform for RH management and reporting",
+  applicationName: "MaxRH"
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
-
- 
-      
+}>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Providers>
-          {children}
-          </Providers>
+    <>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        <Toaster/>
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
       </body>
     </html>
+    </>
   );
 }
