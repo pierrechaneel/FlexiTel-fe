@@ -10,7 +10,8 @@ Ce projet est le fontend de notre plateforme web destinée aux clients finaux, l
 - **Portefeuille virtuel** : wallet relié à chaque utilisateur, avec suivi du solde et des rechargements cumulés.  
 - **Facturation** : génération mensuelle de factures simulées, stockage des lignes de facturation en JSON et possibilité de télécharger un PDF.  
 - **Surveillance de numéros** : ajout et aliasing de numéros tiers (ex : numéro d’enfant), avec historique de création et statut de chaque numéro (`UNASSIGNED`, `ACTIVE`, `SUSPENDED`).  
-- **Architecture technique** :  
+- **Architecture technique** :
+  - Frontend: Next js /TypeScript  
   - Backend : NestJS / TypeScript  
   - Base de données : PostgreSQL orchestré via Prisma ORM  
   - Modèles clés : `User`, `Wallet`, `PhoneNumber`, `Offer`, `Subscription`, `Invoice`, `MonitoredNumber`  
